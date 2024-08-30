@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './ComingSoon.css';
-import logo from './images/logo.png';
+import logo from './images/logo12.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faLinkedin,faXTwitter, faYoutube, faInstagram } from '@fortawesome/free-brands-svg-icons';
 
@@ -39,10 +39,7 @@ const ComingSoon = () => {
                 <div className="line"></div>
                 <h3>We&apos;re working hard to give you the best experience!</h3>
             </div>
-            <div className="countdown mb-5">
-                <div className="text" style={{ color: 'white' }}>
-                    Countdown
-                </div>
+            <div className="countdown">
                 <div className="time">
                     {`${timeLeft.days}d ${timeLeft.hours}h ${timeLeft.minutes}m ${timeLeft.seconds}s`}
                 </div>

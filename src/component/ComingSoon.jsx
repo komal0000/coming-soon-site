@@ -1,17 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import './ComingSoon.css';
-import logo from './images/logo.png'
+import logo from './images/logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebook, faLinkedin, faTwitter, faYoutube,faInstagram  } from '@fortawesome/free-brands-svg-icons';
+import { faFacebook, faLinkedin,faXTwitter, faYoutube, faInstagram } from '@fortawesome/free-brands-svg-icons';
+
 const ComingSoon = () => {
     const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
 
     useEffect(() => {
-        const countDownDate = new Date("Oct 30, 2024 15:37:25").getTime();
+        const countDownDate = new Date("Sep 14, 2024 15:37:25").getTime();
 
         const interval = setInterval(() => {
             const now = new Date().getTime();
             const distance = countDownDate - now;
+
             const days = Math.floor(distance / (1000 * 60 * 60 * 24));
             const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
@@ -29,41 +31,50 @@ const ComingSoon = () => {
 
     return (
         <div className="coming-soon-container">
-            <div className="header" style={{color:'black'}}>
+            <div className="header">
                 <div className="logo">
-                    <img src={logo} alt="logo" height={'100%'} width={'100%'}/>
+                    <img src={logo} alt="Coming Soon Logo" style={{ height: '100%', width: '100%' }} />
                 </div>
-                <h1>We'Re Coming Soon</h1>
-                <div className='line'>
-                </div>
-                <h3> We're coming soon! We're working hard to give you the best experience!</h3>
+                <h1>We&apos;re Coming Soon</h1>
+                <div className="line"></div>
+                <h3>We&apos;re working hard to give you the best experience!</h3>
             </div>
-            <div className="countdown mb-5" >
-                <div className="text" style={{color:'white'}}>
-                    CountDown
+            <div className="countdown mb-5">
+                <div className="text" style={{ color: 'white' }}>
+                    Countdown
                 </div>
                 <div className="time">
-                {`${timeLeft.days}d ${timeLeft.hours}h ${timeLeft.minutes}m ${timeLeft.seconds}s`}
+                    {`${timeLeft.days}d ${timeLeft.hours}h ${timeLeft.minutes}m ${timeLeft.seconds}s`}
                 </div>
             </div>
             <div className="social-icons">
                 <div className="item">
-                <FontAwesomeIcon icon={faFacebook} size="2x" />
+                    <a href="https://www.facebook.com/thenortheastjournal" target="_blank" rel="noopener noreferrer">
+                        <FontAwesomeIcon icon={faFacebook} size="2x" />
+                    </a>
                 </div>
                 <div className="item">
-                <FontAwesomeIcon icon={faLinkedin} size="2x" />
+                    <a href="#" target="_blank" rel="noopener noreferrer">
+                        <FontAwesomeIcon icon={faLinkedin} size="2x" />
+                    </a>
                 </div>
                 <div className="item">
-                <FontAwesomeIcon icon={faTwitter} size="2x" />
+                    <a href="#" target="_blank" rel="noopener noreferrer">
+                        <FontAwesomeIcon icon={faXTwitter} size="2x" />
+                    </a>
                 </div>
                 <div className="item">
-                <FontAwesomeIcon icon={faYoutube} size="2x" />
+                    <a href="#" target="_blank" rel="noopener noreferrer">
+                        <FontAwesomeIcon icon={faYoutube} size="2x" />
+                    </a>
                 </div>
                 <div className="item">
-                <FontAwesomeIcon icon={faInstagram } size="2x" />
+                    <a href="#" target="_blank" rel="noopener noreferrer">
+                        <FontAwesomeIcon icon={faInstagram} size="2x" />
+                    </a>
                 </div>
             </div>
-                    </div>
+        </div>
     );
 };
 

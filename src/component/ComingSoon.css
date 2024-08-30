@@ -60,6 +60,11 @@ h1 {
 .social-icons{
     display: flex;
     column-gap: 20px;
+    .item{
+        a{
+            color: white;
+        }
+    }
 }
 
 .subscription-form input {
@@ -80,12 +85,12 @@ h1 {
 
 @media (max-width:1024px){
     h1{
-        font-size: 46px;
+        font-size: 36px;
     }
 }
 
 @media(max-width:768px){
     h1{
-        font-size: 40px;
+        font-size: 28px;
     }
 }

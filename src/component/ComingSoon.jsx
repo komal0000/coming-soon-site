@@ -35,7 +35,7 @@ const ComingSoon = () => {
                 <div className="logo">
                     <img src={logo} alt="Coming Soon Logo" style={{ height: '100%', width: '100%' }} />
                 </div>
-                <h1>We&apos;re Coming Soon</h1>
+                <h1>Coming soon: Hyperlocal news and stories from the Northeast! Stay tuned</h1>
                 <div className="line"></div>
                 <h3>We&apos;re working hard to give you the best experience!</h3>
             </div>
